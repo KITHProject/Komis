@@ -40,7 +40,7 @@ export function ProductPageApi(){
                         ))}   
                     </div> */}
                     <div>
-                        <button onClick={() => mutate(productExample)}>Dodaj</button>
+                        <button onClick={() => mutate(productExample)} disabled={isLoading}>Dodaj</button>
                     </div>
                 </div>
             </div>
