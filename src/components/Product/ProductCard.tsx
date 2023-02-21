@@ -9,34 +9,33 @@ interface ProductProps {
 
 export function ProductCard ({...props}: ProductProps){
     return (
-        <>
-           
-        <div className="group relative">
-            <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-            <img src="https://szymon.kowalski.cybulski.dev/media/kws.png" alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/>
-            </div>
-            <div className="mt-4 flex justify-between">
-            <div>
-                <h3 className="text-sm text-gray-700">
+        <> 
+            <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow ">
+                <div className="px-5 pb-5 pt-5"> 
+                    <p className="text-xl font-semibold tracking-tight text-gray-900">
+                        Nazwa: {props.name}
+                    </p>
+                    <p className="text-md font-semibold tracking-tight text-gray-700 pt-5">
+                        Rocznik: {props.year}
+                    </p>
+                </div>
                 <a href="#">
-                    <span aria-hidden="true" className="absolute inset-0"></span>
-                    {props.name} {props.year}
+                    <img className="p-8 rounded-t-lg" src="https://szymon.kowalski.cybulski.dev/media/kws.png" alt="product image" />
                 </a>
-                </h3>
-                <p className="mt-1 text-sm tDDext-gray-500">{props.description}</p>
+                <div className="px-5 pb-5">
+                    <a href="#">
+                        <h5 className="text-xl font-semibold tracking-tight text-gray-900">{props.description}</h5>
+                    </a>
+                    <div className="flex items-center justify-between pt-3">
+                        <span className="text-2xl font-bold text-gray-900">Cena: {props.price}zł</span>      
+                    </div>
+                    <div className="flex items-center justify-between pt-5">
+                        <a href="#" className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Allegro</a>
+                        <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">OLX</a>
+                        <a href="#" className="text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Otomoto</a>
+                    </div>
+                </div>
             </div>
-            <p className="text-sm font-medium text-gray-900">{props.price} PLN</p>
-            </div>
-            <div className="text-xl text-black flex justify-evenly text-sm text-gray-400">
-            <button className="rounded-full ... bg-orange-300">Allegro</button>
-            <button className="rounded-full ... bg-blue-300" >OLX</button>
-            <button className="rounded-full ... bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">OTOMOTO</button>
-
-            </div>
-
-        </div>
-              </>
-          );
-        
-        
-    }
+        </>
+    );    
+}

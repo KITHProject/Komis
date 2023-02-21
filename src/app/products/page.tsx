@@ -1,11 +1,11 @@
 'use client'
 
-import { ProductPageApi } from "@/components/Product/ProductPageApi";
+import { ProductPage } from "@/components/Product/ProductPage";
 
 export default function Products() {
   return (
     <>
-      <ProductPageApi/>
+      <ProductPage/>
     </>
   );
 }
