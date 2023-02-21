@@ -1,13 +1,11 @@
-import { ProductPage } from "@/components/Product/ProductPage";
+'use client'
+
 import { ProductPageApi } from "@/components/Product/ProductPageApi";
 
 export default function Products() {
-  
   return (
-<>
-
-        <ProductPageApi/>
-    
-      </>
+    <>
+      <ProductPageApi/>
+    </>
   );
 }
