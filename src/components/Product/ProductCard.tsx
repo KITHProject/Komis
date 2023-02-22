@@ -1,5 +1,3 @@
-'use client'
-
 interface ProductProps {
     name : string;
     description: string;

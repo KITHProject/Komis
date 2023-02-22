@@ -32,27 +32,5 @@
         "description" : "szybki rower szosa",
         "price": 2000,
         "year": 2023
-    },
-    {
-        "name" : "rower góski",
-        "description" : "nie szybki rower",
-        "price": 1000
-    },
-    {
-        "name" : "narty inovik",
-        "description" : "szybkie narty",
-        "price": 2050
-    },
-    {
-        "name" : "dobra fura opel",
-        "description" : "raz klepany w gazie",
-        "price": 2000,
-        "year": 1998
-    },
-    {
-        "name" : "seat ibiza",
-        "description" : "byłem nim w hiszpanii",
-        "price": 13500,
-        "year": 2005
     }
 ]

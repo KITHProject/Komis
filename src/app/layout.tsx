@@ -10,14 +10,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <QueryClientProvider client={queryClient}>
-    <html lang="en">
-      <head/>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+      <html lang="en">
+        <head/>
+        <body>
+          <div className="flex flex-col h-screen">
+          <Header />
+          <div className="flex-grow">
+          {children}
+          </div>
+          <Footer />
+          </div>
+        </body>
+      </html>
     </QueryClientProvider>
   );
 }

@@ -1,7 +1,10 @@
-export const semi = false;
-export const singleQuote = true;
-export const printWidth = 100;
-export const tabWidth = 2;
-export const useTabs = false;
-export const trailingComma = 'es5';
-export const bracketSpacing = true;
+module.exports = {
+    semi: false,
+    singleQuote: true,
+    printWidth: 100,
+    tabWidth: 2,
+    useTabs: false,
+    trailingComma: 'es5',
+    bracketSpacing: true,
+  }
+  
