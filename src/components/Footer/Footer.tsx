@@ -4,7 +4,7 @@ export function Footer() {
             <div className="container px-6 m-auto">
                 <div className="sm:flex sm:items-center sm:justify-between ">
                     <a className="flex items-center mb-4 sm:mb-0 keychainify-checked">
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Komis</span>
+                        Komis
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>

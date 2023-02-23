@@ -37,7 +37,7 @@ export function Header() {
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a href="#" className="text-sm font-semibold leading-6 text-gray-100 keychainify-checked">
-                  Log in <span aria-hidden="true">&rarr;</span>
+                  Log in
                 </a>
               </div>
             </nav>

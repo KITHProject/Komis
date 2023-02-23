@@ -32,14 +32,12 @@ export const addProduct = async ({...props}: ProductProps) => {
 export const fetchProducts = async () => {
     let products = "nothing"
     try {
-        console.log(2)
-        await getDocs(collection(db, "products")).then((res) => {
-            console.log(res.docs[0])
-            return res
-        }
-        )
+        let products = []
+        const querySnapshot = await getDocs(collection(db, "products"))
+        products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()))
+        return products        
     } catch (err) {
-        alert(err)
+        return err
     }
     // const querySnapshot = 
     // products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()));

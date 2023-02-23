@@ -4,7 +4,11 @@ import products_list from "./products_data.json"
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { addProduct } from "@/utils/actions/product";
 
-export function ProductPage (){
+interface Props {
+    products: any
+}
+
+export function ProductPage ({products}: Props){
 
     const queryClient = useQueryClient();
 
@@ -37,7 +41,7 @@ export function ProductPage (){
                         See my products
                     </h2>
                     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                        {products_list.map((item, id) => (    
+                        {products.map((item, id) => (    
                             <ProductCard {...item}  key={id}/>
                         ))}   
                     </div>
