@@ -1,5 +1,5 @@
 import { db } from "@/firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 
 
 interface ProductProps {
@@ -13,7 +13,6 @@ export const addProduct = async ({...props}: ProductProps) => {
     var postedAt = new Date().toLocaleString("en-US");
   
     try {
-        console.log(db)
         await addDoc(collection(db, 'products'), {
             postedAt: postedAt,
             name : props.name,
@@ -21,7 +20,6 @@ export const addProduct = async ({...props}: ProductProps) => {
             price: props.price,
             year: props.year,
         }).then((res) => {
-            console.log(res)
             return res
         }
         )
@@ -30,3 +28,23 @@ export const addProduct = async ({...props}: ProductProps) => {
     }
     
   }
+
+export const fetchProducts = async () => {
+    let products = "nothing"
+    try {
+        console.log(2)
+        await getDocs(collection(db, "products")).then((res) => {
+            console.log(res.docs[0])
+            return res
+        }
+        )
+    } catch (err) {
+        alert(err)
+    }
+    // const querySnapshot = 
+    // products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()));
+    // console.log(products)
+    return products
+  }
+
+

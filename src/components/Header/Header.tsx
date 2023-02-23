@@ -7,7 +7,7 @@ const navigation = [
     { name: "Products", href: "products" },
     { name: "Features", href: "/" },
     { name: "Marketplace", href: "/" },
-    { name: "Company", href: "/" },
+    { name: "Admin", href: "/admin" },
   ];
   
 export function Header() {
@@ -18,7 +18,9 @@ export function Header() {
           <div className="container px-6 m-auto">
             <nav className="flex items-center justify-between" aria-label="Global">
               <div className="flex lg:flex-1">
-                <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
+                <a href="/">
+                  <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
+                </a>
               </div>
               <div className="flex lg:hidden">
                 <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(true)}>
