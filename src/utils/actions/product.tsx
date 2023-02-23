@@ -12,37 +12,22 @@ interface ProductProps {
 export const addProduct = async ({...props}: ProductProps) => {
     var postedAt = new Date().toLocaleString("en-US");
   
-    try {
-        await addDoc(collection(db, 'products'), {
-            postedAt: postedAt,
-            name : props.name,
-            description: props.description,
-            price: props.price,
-            year: props.year,
-        }).then((res) => {
-            return res
-        }
-        )
-    } catch (err) {
-        alert(err)
-    }
-    
+    await addDoc(collection(db, 'products'), {
+        postedAt: postedAt,
+        name : props.name,
+        description: props.description,
+        price: props.price,
+        year: props.year,
+    }).then((res) => {
+        return res
+    })
   }
 
 export const fetchProducts = async () => {
-    let products = "nothing"
-    try {
-        let products = []
-        const querySnapshot = await getDocs(collection(db, "products"))
-        products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()))
-        return products        
-    } catch (err) {
-        return err
-    }
-    // const querySnapshot = 
-    // products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()));
-    // console.log(products)
-    return products
+    let products = []
+    const querySnapshot = await getDocs(collection(db, "products"))
+    products = await Promise.all(querySnapshot.docs.map((doc) => doc.data()))
+    return products        
   }
 
 
