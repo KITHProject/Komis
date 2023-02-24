@@ -2,6 +2,11 @@
   "name": "komis",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
   "scripts": {
     "dev": "next dev",
     "turbo": "next dev --turbo",
@@ -11,7 +16,6 @@
     "prettier": "prettier --write .",
     "prepare": "husky install"
   },
-  
   "dependencies": {
     "@headlessui/react": "^1.7.11",
     "@heroicons/react": "^2.0.16",

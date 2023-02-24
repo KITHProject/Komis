@@ -4,21 +4,12 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-<<<<<<< HEAD
   { name: 'Products', href: 'products' },
   { name: 'Features', href: '/' },
   { name: 'Marketplace', href: '/' },
   { name: 'Admin', href: '/admin' },
 ]
 
-=======
-    { name: "Products", href: "products" },
-    { name: "Features", href: "/" },
-    { name: "Services", href: "/" },
-    { name: "Admin", href: "/admin" },
-  ];
-  
->>>>>>> 1c5e735fe8cb84c6450d3f2bbcbf8ef5bfcc9375
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
