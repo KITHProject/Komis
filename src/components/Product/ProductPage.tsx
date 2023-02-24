@@ -6,21 +6,7 @@ import { addProduct, fetchProducts } from "@/utils/actions/product";
 
 export function ProductPage (){
 
-    let productExample = {
-        name : 'rower',
-        description: 'szybki',
-        price: 123,
-        year: 2020,
-    }
-    
-    const { mutate } = useMutation(addProduct, {
-        onSuccess: data => {
-          console.log(data);
-        },
-        onError: (error) => {
-          alert(`there was an error: ${error}` )
-        }
-      });
+
 
     const { isLoading, error, data } = useQuery('productData', () => fetchProducts());
 
@@ -36,9 +22,6 @@ export function ProductPage (){
                             {data.map((item, id) => (    
                                 <ProductCard {...item}  key={id}/>
                             ))}   
-                        </div>
-                        <div>
-                            <button onClick={() => mutate(productExample)}>Dodaj</button>
                         </div>
                     </div>
                 </div>
