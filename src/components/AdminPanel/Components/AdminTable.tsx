@@ -22,7 +22,7 @@ export function AdminTable (){
                                 <th scope="col" className="h-12 px-6 text-sm font-medium border-l first:border-l-0 stroke-slate-700 text-slate-700 bg-slate-100">{item}</th>
                             ))}             
                         </tr>
-                          {data.map((item, id) => (
+                          {products_list.map((item, id) => (
                             <Row {...item}  key={id}/>
                         ))}  
                     </tbody>
