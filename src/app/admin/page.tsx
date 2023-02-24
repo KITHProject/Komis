@@ -1,11 +1,9 @@
-import { AdminPanelPage } from "@/components/AdminPanel/AdminPanelPage";
-
-
+import { AdminPanelPage } from '@/components/AdminPanel/AdminPanelPage'
 
 export default function Admin() {
   return (
     <>
-      <AdminPanelPage/>
+      <AdminPanelPage />
     </>
-  );
+  )
 }

@@ -1,12 +1,10 @@
-import React, { useState, useRef, useEffect } from "react"
-import ReactDOM from "react-dom"
+import React, { useState, useRef, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 
-export function AddProductButton (){
+export function AddProductButton() {
   const [isShowing, setIsShowing] = useState(false)
 
   const wrapperRef = useRef(null)
-
-
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -14,31 +12,29 @@ export function AddProductButton (){
         setIsShowing(false)
       }
     }
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [wrapperRef])
 
   useEffect(() => {
-    let html = document.querySelector("html")
+    let html = document.querySelector('html')
 
     if (html) {
       if (isShowing && html) {
-        html.style.overflowY = "hidden"
+        html.style.overflowY = 'hidden'
 
         const focusableElements =
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 
-        const modal = document.querySelector("#modal") // select the modal by it's id
+        const modal = document.querySelector('#modal') // select the modal by it's id
 
-        const firstFocusableElement =
-          modal.querySelectorAll(focusableElements)[0] // get first element to be focused inside modal
+        const firstFocusableElement = modal.querySelectorAll(focusableElements)[0] // get first element to be focused inside modal
 
         const focusableContent = modal.querySelectorAll(focusableElements)
 
-        const lastFocusableElement =
-          focusableContent[focusableContent.length - 1] // get last element to be focused inside modal
+        const lastFocusableElement = focusableContent[focusableContent.length - 1] // get last element to be focused inside modal
 
         // document.addEventListener("keydown", function (e) {
         //   if (e.keyCode === 27) {
@@ -69,7 +65,7 @@ export function AddProductButton (){
 
         // firstFocusableElement.focus()
       } else {
-        html.style.overflowY = "visible"
+        html.style.overflowY = 'visible'
       }
     }
   }, [isShowing])
@@ -83,7 +79,7 @@ export function AddProductButton (){
         <span>Dodaj nowy produkt</span>
       </button>
 
-      {isShowing && typeof document !== "undefined"
+      {isShowing && typeof document !== 'undefined'
         ? ReactDOM.createPortal(
             <div
               className="fixed top-0 left-0 z-20 flex h-screen w-screen items-center justify-center bg-slate-300/20 backdrop-blur-sm"
@@ -101,9 +97,7 @@ export function AddProductButton (){
               >
                 {/*        <!-- Modal header --> */}
                 <header id="header-4a" className="flex items-center">
-                  <h3 className="flex-1 text-lg font-medium text-slate-700">
-                    Add new product
-                  </h3>
+                  <h3 className="flex-1 text-lg font-medium text-slate-700">Add new product</h3>
                   <button
                     onClick={() => setIsShowing(false)}
                     className="inline-flex h-10 items-center justify-center gap-2 justify-self-center whitespace-nowrap rounded-full px-5 text-sm font-medium tracking-wide  text-emerald-500 transition duration-300 hover:bg-emerald-100 hover:text-emerald-600 focus:bg-emerald-200 focus:text-emerald-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:text-emerald-300 disabled:shadow-none disabled:hover:bg-transparent"
@@ -121,9 +115,7 @@ export function AddProductButton (){
                         aria-labelledby="title-79 desc-79"
                       >
                         <title id="title-79">Icon title</title>
-                        <desc id="desc-79">
-                          A more detailed description of the icon
-                        </desc>
+                        <desc id="desc-79">A more detailed description of the icon</desc>
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -184,8 +176,8 @@ export function AddProductButton (){
                         Price
                       </label>
                     </div>
-                     {/*                <!-- Input field --> */}
-                     <div className="relative">
+                    {/*                <!-- Input field --> */}
+                    <div className="relative">
                       <input
                         id="id-b33"
                         type="number"
@@ -200,8 +192,8 @@ export function AddProductButton (){
                         Year (optional for cars)
                       </label>
                     </div>
-                     {/*                <!-- Input field --> */}
-                     <div className="relative">
+                    {/*                <!-- Input field --> */}
+                    <div className="relative">
                       <input
                         id="id-b43"
                         type="url"

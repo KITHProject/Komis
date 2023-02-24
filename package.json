@@ -4,10 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
+  
   "dependencies": {
     "@headlessui/react": "^1.7.11",
     "@heroicons/react": "^2.0.16",
@@ -24,10 +28,12 @@
     "firebase": "^9.17.1",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.3.8",
+    "husky": "^8.0.3",
     "immer": "^9.0.19",
+    "lint-staged": "^13.1.2",
     "next": "13.1.6",
     "node-fetch": "^3.3.0",
-    "prettier": "^2.8.4",
+    "prettier": "2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "^3.39.3",

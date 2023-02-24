@@ -5,8 +5,8 @@ const nextConfig = {
     appDir: true,
   },
   api: {
-    bodyParser: true
-  }
+    bodyParser: true,
+  },
 }
 
 module.exports = nextConfig

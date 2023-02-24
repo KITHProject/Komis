@@ -1,10 +1,3 @@
-
-
 export function Carousel() {
-
-    return(
-        <>
-        
-        </>
-    )
+  return <></>
 }
