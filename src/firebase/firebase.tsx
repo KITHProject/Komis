@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
-import { setAuthorized, setUsername } from './zustand/useAuthorizationStore'
+import { setAuthorized, setUsername } from '../zustand/useAuthorizationStore'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,

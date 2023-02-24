@@ -1,4 +1,4 @@
-import { db } from '@/firebase'
+import { db } from '@/firebase/firebase'
 import { addDoc, collection, getDocs } from 'firebase/firestore'
 
 interface ProductProps {
